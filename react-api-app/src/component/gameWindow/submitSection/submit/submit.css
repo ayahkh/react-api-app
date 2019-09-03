@@ -1,0 +1,8 @@
+#submit {
+  background: skyblue;
+}
+
+#submit:hover {
+  background: white;
+  color: black;
+}
