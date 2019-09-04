@@ -8,16 +8,19 @@ console.log(GetGithubData);
 const MyFunctionalComponentFunction = () => {
   const [input, setInput] = React.useState("");
 
-  const placeholder = {
-    avatar_url:
-      "https://static.boredpanda.com/blog/wp-content/uploads/2015/07/donald-trump-funny-look-alike-1__700.jpg",
-    name: "Donald"
-  };
+  // const placeholder = {
+  //   avatar_url:
+  //     "https://static.boredpanda.com/blog/wp-content/uploads/2015/07/donald-trump-funny-look-alike-1__700.jpg",
+  //   name: "Donald"
+  // };
 
   const [display, setDisplay] = React.useState(placeholder);
   const [numberOfSeconds, setNumberOfSeconds] = React.useState(30);
-
   const { avatar_url, name } = display;
+
+  React.useEffect(() => {
+    setNumberOfSeconds(numberOfSeconds - 1);
+  }, [numberOfSeconds]);
 
   return (
     <div>
