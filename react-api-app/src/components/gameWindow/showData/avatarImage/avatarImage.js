@@ -6,7 +6,7 @@ const AvatarImage=(props)=>{
 
   return (
     <div>
-    <img src={props.avatar_url} >
+    <img src={props.url} >
     </div>
   );
 }
