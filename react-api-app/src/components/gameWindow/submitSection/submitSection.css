@@ -1,9 +1,10 @@
 #submitSection {
-  background: black;
+  background: transparent;
   display: flex;
   flex-direction: row;
-  width: 80vw;
-  margin: 20px 20px;
+  align-items: center;
   align-content: center;
   justify-content: center;
+  width: 40vw;
+  height: 50px;
 }

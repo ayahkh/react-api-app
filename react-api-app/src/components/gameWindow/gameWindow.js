@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./gameWindow.css";
 
 import SubmitSection from "./submitSection/SubmitSection";

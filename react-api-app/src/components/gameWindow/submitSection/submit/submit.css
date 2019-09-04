@@ -1,0 +1,13 @@
+#submit {
+  border: 3px solid transparent;
+  color: white;
+  font-size: 20px;
+  background: rgba(0, 128, 0, 0.842);
+  width: 200px;
+  height: 45px;
+  border-bottom: 3px solid white;
+}
+
+#submit:hover {
+  background: rgba(0, 112, 0, 0.5);
+}
