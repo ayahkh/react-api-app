@@ -1,10 +1,15 @@
 import React from "react";
 import "./App.css";
-import FirstElement from "./components/InputStart";
+import FirstElement from "../src/components/githubSearch/start/InputStart";
 import Image from "./components/gameWindow/main";
 
 function App() {
-  return <FirstElement />;
+  return (
+    <div>
+  <FirstElement />
+  <Image />
+  </div>
+  );
   
 }
 
