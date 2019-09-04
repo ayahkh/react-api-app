@@ -5,3 +5,8 @@
   margin: 20px 20px;
   padding: 20px 20px;
 }
+
+.all{
+  display: flex;
+  flex-direction: column;
+}

@@ -8,13 +8,15 @@ import SubmitSection from "./submitSection"
 const GameWindow = ({data}) => {
   const {avatar_url, name}= data;
   return (
-    <div id="gameWindow">
+    <div id="gameWindow" class="all">
       <AvatarImage avatar_url={avatar_url} />
       <UserName name={avatar_url} />
+        <h1>Please Guess What Is The Image</h1>
       <Image />
       <SubmitSection />
 
     </div>
+    
   );
 };
 
