@@ -5,15 +5,18 @@ import FirstElement from "../src/components/githubSearch/start/InputStart";
 
 
 function App() {
+    const [data, setData] = React.useState(null);
+    const [display, setDisplay]=React.useState(false);
+    const [numberOfSeconds, setNumberOfSeconds] = React.useState(30);
+
   return (
     <div>
 
       <div>
-        <FirstElement />
+        <FirstElement setData={setData} setDisplay={setDisplay}/>
       </div>
       <div>
-        <GameWindow />
-       
+      {display? <GameWindow data={data} />: null}
       </div>
     </div>
   );

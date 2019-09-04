@@ -1,18 +1,22 @@
 import React, { useState } from "react";
 import "./gameWindow.css";
-import Image from "./main";
+import AvatarImage from "./showData/avatarImage/avatarImage";
+import UserName from "./showData/userName/userName";
+import Image from "./main/index"
+import SubmitSection from "./submitSection"
 
-import SubmitSection from "./submitSection/SubmitSection";
-
-const GameWindow = () => {
+const GameWindow = ({data}) => {
+  const {avatar_url, name}= data;
   return (
-    <div>
-    <div id="gameWindow"  class="all">
-      <h1>Please Guess What Is The Image</h1>
+    <div id="gameWindow" class="all">
+      <AvatarImage avatar_url={avatar_url} />
+      <UserName name={avatar_url} />
+        <h1>Please Guess What Is The Image</h1>
       <Image />
       <SubmitSection />
+
     </div>
-    </div>
+    
   );
 };
 
