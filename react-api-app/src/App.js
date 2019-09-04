@@ -4,6 +4,8 @@ import "./App.css";
 import FirstElement from "./components/InputStart";
 
 function App() {
+  const [display, setDisplay] = React.useState(placeholder);
+  const [numberOfSeconds, setNumberOfSeconds] = React.useState(30);
   return <FirstElement />;
 }
 

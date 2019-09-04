@@ -4,7 +4,7 @@ import "./avatarImage.css";
 const AvatarImage = props => {
   return (
     <div>
-      <img src={props.url} />
+      <img class="avatar-img" src={props.url} />
     </div>
   );
 };
