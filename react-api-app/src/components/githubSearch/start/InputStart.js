@@ -1,8 +1,8 @@
 import React from "react";
-import AvatarImage from "./gameWindow/showData/avatarImage/avatarImage";
-import UserName from "./gameWindow/showData/userName/userName";
-
-import GetGithubData from "../getData/githubData";
+import AvatarImage from "../../gameWindow/showData/avatarImage/avatarImage";
+import UserName from "../../gameWindow/showData/userName/userName";
+import './style.css';
+import GetGithubData from "../../../getData/githubData";
 console.log(GetGithubData);
 
 const MyFunctionalComponentFunction = () => {
@@ -21,13 +21,7 @@ const MyFunctionalComponentFunction = () => {
 
   return (
     <div>
-      <div>
-        <AvatarImage url={avatar_url} />
-      </div>
-      <div>
-        <UserName username={name} />
-      </div>
-      <div>Timer {numberOfSeconds}</div>
+     
       <label>Please enter your GitHub username:</label>
       <input value={input} onInput={e => setInput(e.target.value)} />
       <button
@@ -42,6 +36,16 @@ const MyFunctionalComponentFunction = () => {
       >
         START
       </button>
+      <div class="show-data">
+      <div>
+        <AvatarImage url={avatar_url} />
+      </div>
+      <div class="show-data">
+        <h3>Hello</h3> 
+        <UserName  username={name} />
+      </div>
+      </div>
+      <div>Timer {numberOfSeconds}</div>
       {console.log("Test", input)}
     </div>
   );
