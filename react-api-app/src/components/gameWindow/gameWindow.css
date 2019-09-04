@@ -1,12 +1,16 @@
 #gameWindow {
   display: flex;
   justify-content: space-around;
-  background: whitesmoke;
+
   margin: 20px 20px;
   padding: 20px 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.all{
+.all {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
