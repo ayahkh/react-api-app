@@ -1,4 +1,40 @@
-.show-data{
-    display: flex;
-    flex-direction: row;
+.searchSection {
+  display: flex;
+  margin: 20px 20px;
+  padding: 20px 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: whitesmoke;
+}
+
+.startButton {
+  border: 3px solid transparent;
+  color: white;
+  font-size: 20px;
+  background: black;
+  width: 200px;
+  height: 45px;
+  border-bottom: 3px solid white;
+}
+
+.startInput {
+  background: transparent;
+  border: 3px solid transparent;
+  border-bottom: solid 3px black;
+  width: 60vw;
+  height: 36px;
+  text-align: center;
+  margin: 2px 2px;
+  font-size: 20px;
+}
+
+#timer {
+  padding: 5px 5px;
+  color: white;
+  background: black;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 20px;
 }

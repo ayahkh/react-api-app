@@ -3,7 +3,6 @@ import Timer from "../../gameWindow/timer/timer";
 
 import "./style.css";
 import GetGithubData from "../../../getData/githubData";
-console.log(GetGithubData);
 
 const MyFunctionalComponentFunction = ({ setData, setDisplay }) => {
   const [input, setInput] = React.useState("");
@@ -24,24 +23,34 @@ const MyFunctionalComponentFunction = ({ setData, setDisplay }) => {
 
   return (
     <div>
-      <Timer seconds={time} />
-      <label>Please enter your GitHub username:</label>
-      <input value={input} onInput={e => setInput(e.target.value)} />
-      <button
-        onClick={() => {
-          count();
-          const user = input;
-          GetGithubData(user)
-            .then(data => {
-              setData(data);
-            })
-            .then(() => {
-              setDisplay(true);
-            });
-        }}
-      >
-        START
-      </button>
+      <section class="searchSection">
+        <input
+          class="startInput"
+          placeholder="Github Username"
+          value={input}
+          onInput={e => setInput(e.target.value)}
+        />
+
+        <button
+          class="startButton"
+          onClick={() => {
+            count();
+            const user = input;
+            GetGithubData(user)
+              .then(data => {
+                setData(data);
+              })
+              .then(() => {
+                setDisplay(true);
+              });
+          }}
+        >
+          ↳
+        </button>
+      </section>
+      <section id="timer">
+        <Timer seconds={time} />
+      </section>
     </div>
   );
 };
