@@ -16,7 +16,6 @@ const SubmitSection = ({ setScore, score }) => {
     } else {
       setResult("✗ wrong answer");
       setAnswer("");
-
     }
   };
 

@@ -3,7 +3,7 @@ import "./submit.css";
 
 const Submit = (props) => {
   return <button id="submit" 
-  onClick={props.check}
+  onClick={(e)=>{props.check(e)}}
   >↳</button>;
 };
 
