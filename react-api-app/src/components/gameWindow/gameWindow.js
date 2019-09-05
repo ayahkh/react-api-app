@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import "./gameWindow.css";
-import Image from "./main";
+import {ImageUrl} from "./main";
 
 import SubmitSection from "./submitSection/SubmitSection";
 
@@ -9,7 +9,7 @@ const GameWindow = () => {
     <div>
     <div id="gameWindow"  class="all">
       <h1>Please Guess What Is The Image</h1>
-      <Image />
+      <ImageUrl  />
       <SubmitSection />
     </div>
     </div>
