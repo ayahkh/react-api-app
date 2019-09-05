@@ -18,9 +18,10 @@ const GameWindow = ({ data, setScore, score, displayPoints }) => {
         </div>
       </section>
       <section class="game">
-        <h1>Guess the IMG</h1>
+        <h1>Guess the Image</h1>
         <ImageUrl />
         <SubmitSection setScore={setScore} score={score} />
+
         {displayPoints ? <Result recentScore={score} /> : null}
       </section>
     </div>

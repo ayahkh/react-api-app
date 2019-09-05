@@ -23,7 +23,6 @@ const MyFunctionalComponentFunction = ({
       } else {
         setTime(time - 1);
         time--;
-        console.log("Time", time);
       }
     }
   }
@@ -56,10 +55,7 @@ const MyFunctionalComponentFunction = ({
         </button>
       </section>
       <section id="timer">
-        <Timer seconds={time} />
-      </section>
-      <section>
-        <Score recentScore={score} />
+        <Timer seconds={time} /> | <Score recentScore={score} />
       </section>
     </div>
   );

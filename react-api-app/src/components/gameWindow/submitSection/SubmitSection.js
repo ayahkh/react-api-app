@@ -6,20 +6,28 @@ import Answer from "./answer/Answer";
 
 const SubmitSection = ({ setScore, score }) => {
   const [answer, setAnswer] = useState("");
+  const [result, setResult] = useState("");
 
   const checkSolution = () => {
-    for (var i = 0; i < selectTag.length; i++) {
-      if ({ answer }.answer === selectTag[i]) {
-        console.log("true answer");
-        setScore(score + 1);
-      }
+    if (true === selectTag.includes(answer)) {
+      setAnswer("");
+      setScore(score + 1);
+      setResult("");
+    } else {
+      setResult("✗ wrong answer");
+      setAnswer("");
     }
   };
 
   return (
-    <div id="submitSection">
-      <Submit check={checkSolution} />
-      <Answer setAnswer={setAnswer} answer={answer} />
+    <div>
+      <section id="submitSection">
+        <Submit check={checkSolution} />
+        <Answer setAnswer={setAnswer} answer={answer} />
+      </section>
+      <section>
+        <h2>{result}</h2>
+      </section>
     </div>
   );
 };

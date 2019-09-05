@@ -3,9 +3,9 @@
   color: white;
   font-size: 20px;
   background: rgba(0, 128, 0, 0.842);
-  width: 200px;
+  width: 30vw;
   height: 45px;
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid rgb(0, 107, 27);
 }
 
 #submit:hover {
