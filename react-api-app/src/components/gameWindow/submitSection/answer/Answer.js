@@ -10,6 +10,7 @@ const Answer = props => {
       value={props.answer}
       onInput={e => props.setAnswer(e.target.value)}
     ></input>
+    
   );
 };
 

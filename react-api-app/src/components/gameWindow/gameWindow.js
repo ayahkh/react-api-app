@@ -1,6 +1,6 @@
 import React from "react";
 import "./gameWindow.css";
-
+import {ImageUrl} from "./main";
 import AvatarImage from "./showData/avatarImage/avatarImage";
 import UserName from "./showData/userName/userName";
 import SubmitSection from "./submitSection/SubmitSection";
@@ -18,6 +18,7 @@ const GameWindow = ({ data }) => {
       </section>
       <section class="game">
         <h1>Guess the IMG</h1>
+        <ImageUrl  />
         <SubmitSection />
       </section>
     </div>
