@@ -49,10 +49,7 @@ const MyFunctionalComponentFunction = ({ setData, setDisplay, score }) => {
         </button>
       </section>
       <section id="timer">
-        <Timer seconds={time} />
-      </section>
-      <section>
-        <Score recentScore={score} />
+        <Timer seconds={time} /> | <Score recentScore={score} />
       </section>
     </div>
   );
