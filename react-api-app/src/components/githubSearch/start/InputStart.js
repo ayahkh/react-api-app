@@ -5,7 +5,12 @@ import Score from "../../gameWindow/results/score/score";
 import "./style.css";
 import GetGithubData from "../../../getData/githubData";
 
-const MyFunctionalComponentFunction = ({ setData, setDisplay, score }) => {
+const MyFunctionalComponentFunction = ({
+  setData,
+  setDisplay,
+  score,
+  setDisplayPoints
+}) => {
   const [input, setInput] = React.useState("");
   let [time, setTime] = React.useState(60);
 
@@ -14,6 +19,7 @@ const MyFunctionalComponentFunction = ({ setData, setDisplay, score }) => {
     function seconds() {
       if (time === 0) {
         clearInterval(counter);
+        setDisplayPoints(true);
       } else {
         setTime(time - 1);
         time--;
@@ -49,10 +55,7 @@ const MyFunctionalComponentFunction = ({ setData, setDisplay, score }) => {
         </button>
       </section>
       <section id="timer">
-        <Timer seconds={time} />
-      </section>
-      <section>
-        <Score recentScore={score} />
+        <Timer seconds={time} /> | <Score recentScore={score} />
       </section>
     </div>
   );
