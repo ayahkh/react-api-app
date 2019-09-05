@@ -7,14 +7,25 @@ function App() {
   const [data, setData] = React.useState(null);
   const [display, setDisplay] = React.useState(false);
   let [score, setScore] = React.useState(0);
+  let [displayPoints, setDisplayPoints] = React.useState(false);
   return (
     <div>
       <div>
-        <FirstElement setData={setData} setDisplay={setDisplay} score={score} />
+        <FirstElement
+          setData={setData}
+          setDisplay={setDisplay}
+          score={score}
+          setDisplayPoints={setDisplayPoints}
+        />
       </div>
       <div>
         {display ? (
-          <GameWindow data={data} setScore={setScore} score={score} />
+          <GameWindow
+            data={data}
+            setScore={setScore}
+            score={score}
+            displayPoints={displayPoints}
+          />
         ) : null}
       </div>
     </div>
