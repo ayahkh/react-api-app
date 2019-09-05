@@ -1,4 +1,7 @@
 .avatar-img {
+  background: black;
   width: 20%;
-  border: 3px solid black;
+  border: 5px solid black;
+  border-bottom-right-radius: 5%;
+  box-shadow: 5px 5px 4px rgba(2, 45, 2, 0.434);
 }

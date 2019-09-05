@@ -1,30 +1,33 @@
 import React, { useState } from "react";
 import "./submitSection.css";
-import {selectTag} from '../main'
+import { selectTag } from "../main";
 import Submit from "./submit/Submit";
 import Answer from "./answer/Answer";
-const SubmitSection = () => {
+
+const SubmitSection = ({ setScore, score }) => {
   const [answer, setAnswer] = useState("");
+  const [result, setResult] = useState("");
 
-const checkSolution=(e)=>{
-  for(var i=0 ; i<selectTag.length ; i++)
-  {
-    if({answer}.answer === selectTag[i])
-    {
-      console.log("true answer");
-      return true;
-      
+  const checkSolution = () => {
+
+    if (true === selectTag.includes(answer)) {
+      setResult("✓ Right answer");
+        setScore(score + 1);
+    } else {
+      setResult("✗ wrong answer");
+      setAnswer("");
     }
+  };
 
-  }
-  console.log("false answer :( try again");
-
-}
-  
   return (
-    <div id="submitSection">
-      <Submit check={checkSolution} />
-      <Answer setAnswer={setAnswer} answer={answer} />
+    <div>
+      <section id="submitSection">
+        <Submit check={checkSolution} />
+        <Answer setAnswer={setAnswer} answer={answer} />
+      </section>
+      <section>
+        <h2>{result}</h2>
+      </section>
     </div>
   );
 };
