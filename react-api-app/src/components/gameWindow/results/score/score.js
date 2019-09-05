@@ -3,8 +3,7 @@ import "./style.css";
 
 const Score = ({ recentScore }) => (
   <div>
-    <h3>Score: </h3>
-    <label>{recentScore}</label>
+    <p>Score - {recentScore}</p>
   </div>
 );
 

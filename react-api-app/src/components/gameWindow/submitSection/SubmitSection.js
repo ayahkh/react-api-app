@@ -9,14 +9,13 @@ const SubmitSection = ({ setScore, score }) => {
   const [result, setResult] = useState("");
 
   const checkSolution = () => {
-
     if (true === selectTag.includes(answer)) {
-      setResult("✓ Right answer");
-        setScore(score + 1);
+      setAnswer("");
+      setScore(score + 1);
+      setResult("");
     } else {
       setResult("✗ wrong answer");
       setAnswer("");
-
     }
   };
 
