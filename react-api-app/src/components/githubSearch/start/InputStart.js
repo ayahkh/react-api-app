@@ -16,7 +16,6 @@ const MyFunctionalComponentFunction = ({ setData, setDisplay }) => {
       } else {
         setTime(time - 1);
         time--;
-        console.log("Time", time);
       }
     }
   }
