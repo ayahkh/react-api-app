@@ -1,5 +1,6 @@
-import * as React  from "react";
-import {useState, useEffect}  from "react";
+import * as React from "react";
+import { useState, useEffect } from "react";
+
 import ErrorBoundary from "../../../error_boundary";
 import { getPixabayData } from "../../../getData/pixabayData.js";
 import { Image } from "./image/image";
@@ -60,3 +61,4 @@ const ImageUrl=()=> {
 
 
 
+export default ErrorBoundary(ImageUrl);

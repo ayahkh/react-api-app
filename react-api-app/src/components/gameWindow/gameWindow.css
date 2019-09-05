@@ -1,12 +1,18 @@
 #gameWindow {
-  display: flex;
-  justify-content: space-around;
-  background: whitesmoke;
-  margin: 20px 20px;
-  padding: 20px 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.all{
+.game {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gitSection {
+  color: grey;
+  background: rgba(0, 128, 0, 0.15);
+  display: flex;
+  flex-direction: row;
 }
