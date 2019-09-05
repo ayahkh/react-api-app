@@ -4,16 +4,19 @@ import { selectTag } from "../main";
 import Submit from "./submit/Submit";
 import Answer from "./answer/Answer";
 
-const SubmitSection = () => {
+const SubmitSection = ({ setScore, score }) => {
   const [answer, setAnswer] = useState("");
   const [result, setResult] = useState("");
 
   const checkSolution = () => {
+
     if (true === selectTag.includes(answer)) {
       setResult("✓ Right answer");
+        setScore(score + 1);
     } else {
       setResult("✗ wrong answer");
       setAnswer("");
+
     }
   };
 

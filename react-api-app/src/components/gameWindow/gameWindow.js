@@ -5,7 +5,7 @@ import AvatarImage from "./showData/avatarImage/avatarImage";
 import UserName from "./showData/userName/userName";
 import SubmitSection from "./submitSection/SubmitSection";
 
-const GameWindow = ({ data }) => {
+const GameWindow = ({ data, setScore, score }) => {
   const { avatar_url, name } = data;
   return (
     <div id="gameWindow" class="all">
@@ -17,9 +17,11 @@ const GameWindow = ({ data }) => {
         </div>
       </section>
       <section class="game">
+
         <h1>Guess the Image</h1>
         <ImageUrl />
-        <SubmitSection />
+        <SubmitSection setScore={setScore} score={score} />
+
       </section>
     </div>
   );

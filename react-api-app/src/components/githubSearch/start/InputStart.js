@@ -1,10 +1,11 @@
 import React from "react";
 import Timer from "../../gameWindow/timer/timer";
+import Score from "../../gameWindow/results/score/score";
 
 import "./style.css";
 import GetGithubData from "../../../getData/githubData";
 
-const MyFunctionalComponentFunction = ({ setData, setDisplay }) => {
+const MyFunctionalComponentFunction = ({ setData, setDisplay, score }) => {
   const [input, setInput] = React.useState("");
   let [time, setTime] = React.useState(60);
 
@@ -49,6 +50,9 @@ const MyFunctionalComponentFunction = ({ setData, setDisplay }) => {
       </section>
       <section id="timer">
         <Timer seconds={time} />
+      </section>
+      <section>
+        <Score recentScore={score} />
       </section>
     </div>
   );
